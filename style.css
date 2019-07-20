@@ -1,0 +1,6 @@
+/* CSS Document */
+*{margin:0; padding:0;}
+.header{
+    height: 70px; /* Высота блока */
+    background-color: #FF5901
+   }
