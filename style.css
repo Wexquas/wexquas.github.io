@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box
+}
+
+body {
+  min-width: 1200px;
+  font-family: Noto Sans, sans-serif;
+  background-color: #F7F7F7;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+.logo{
+	width: 113px;
+	height: 50px;
+}
+
+
+
+.topinfo {
+  list-style: none;
+  display: flex;
+  height: 100px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+.topinfo li{
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+
+.topinfo li:first-child{
+	width: 200px;
+	padding-left: 70px;
+}
+.topinfo li:nth-child(3){
+	font-size: 24pt;
+	width: 350px;
+}
+.topinfo li:nth-child(5){
+	font-size: 16pt;
+	width: 350px;
+}
+.topinfo li:last-child{
+	font-size: 16pt;
+	width: 200px;
+}
+
+a[href^="tel"]{
+	text-decoration: none;
+	color: #000000;
+}
+
+
+.line{
+	border-right: 2px solid #7a7a7a;
+	height: 50px;
+	width: 3px;
+}
+
+.bigline{
+	border-right: 2px solid #7a7a7a;
+	height: 80px;
+	width: 3px;
+}
+
+.navibar{
+	display: flex;
+	height: 60px;
+    background-color: #ffd43e;
+    border-top: 2px solid #7a7a7a;
+    border-bottom: 2px solid #7a7a7a;
+	list-style: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+	padding: 0 200px;
+}
+
+
+.navibar li{
+	height: 60px;
+	padding: 20px 75px;
+}
+
+.navibar li:hover{
+	box-shadow: inset 0 0 8px #7a7a7a;
+}
