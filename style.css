@@ -1,5 +1,9 @@
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
+}
+
+html{
+	width: 100%;
 }
 
 body {
@@ -8,6 +12,7 @@ body {
   background-color: #F7F7F7;
   margin: 0;
   padding: 0;
+	width: 100%;
 }
 
 img {
@@ -53,7 +58,7 @@ img {
 	letter-spacing: 2px;
 }
 .topinfo li:last-child{
-	font-size: 16pt;
+	font-size: 18pt;
 	width: 200px;
 	padding-right: 70px;
 	margin-left: 10px;
@@ -93,11 +98,88 @@ a{
 
 
 .navibar li{
+	font-size: 14pt;
 	height: 100%;
-	padding: 19px 75px;
+	padding: 17px 75px;
 	white-space:nowrap;
 }
 
 .navibar li:hover{
 	box-shadow: inset 0 0 8px #7a7a7a;
 }
+
+
+.wrap {
+	height: 800px; /* 82 */
+	margin: 0 auto; /* ? */
+	position: relative;
+	max-width: 1903px; /* 100% или 100vw*/
+	width: 100%;
+}
+.wrap > input {
+	display: none;
+}
+
+.slider {
+	background-color: #F7F7F7;
+	height: inherit;
+	overflow: hidden;
+	position: relative;
+	width: inherit;
+}
+.slides {
+	height: inherit;
+	opacity: 0;
+	position: absolute;
+	width: inherit;
+	z-index: 0;
+	transform: translateX(-400px);
+	/*-webkit-filter: hue-rotate(90deg);*/
+	transition: 0.5s;
+	/*margin: 0 2%;*/
+}
+
+.img1 { background-image: url("images/auto.jpg"); background-repeat: no-repeat; background-size: contain; }
+.img2 { background-image: url("images/arizona.jpg"); background-repeat: no-repeat; background-size: contain;}
+.img3 { background-image: url("images/cars.jpg"); background-repeat: no-repeat;background-size: contain;}
+
+.control {
+	position: absolute;
+	margin-left: -50px;
+	left: 50%;
+}
+.wrap label {
+	cursor: pointer;
+	display: inline-block;
+	height: 8px;
+	margin: 10px;
+	position: relative;
+	width: 8px;
+	border-radius: 20%;
+}
+.wrap label:after {
+	border: 2px solid green;
+	content: " ";
+	display: block;
+	height: 12px;
+	left: -4px;
+	position: absolute;
+	top: -4px;
+	width: 12px;
+	border-radius: 20%;
+}
+
+#point1:checked ~ .control label:nth-of-type(1),
+#point2:checked ~ .control label:nth-of-type(2),
+#point3:checked ~ .control label:nth-of-type(3) {
+	background: green;
+}
+#point1:checked ~ .slider > .img1,
+#point2:checked ~ .slider > .img2,
+#point3:checked ~ .slider > .img3 {
+	opacity: 1;
+	z-index: 1;
+	transform: none;
+	-webkit-filter: none;
+}
+
