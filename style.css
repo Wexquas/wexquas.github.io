@@ -31,7 +31,7 @@ img {
   white-space:nowrap;
   list-style: none;
   display: flex;
-  height: 100px;
+  height: 110px;
   justify-content: space-around;
   align-items: center;
   margin: 0;
@@ -87,7 +87,7 @@ a{
 
 .navibar{
 	display: flex;
-	height: 60px;
+	height: 70px;
     background-color: #ffd43e;
     border-top: 2px solid #7a7a7a;
     border-bottom: 2px solid #7a7a7a;
@@ -101,7 +101,7 @@ a{
 .navibar li{
 	font-size: 14pt;
 	height: 100%;
-	padding: 17px 75px;
+	padding: 22px 75px;
 	white-space:nowrap;
 }
 
@@ -111,18 +111,17 @@ a{
 
 
 .wrap { /* обернуть все в див, высоту 1000пх, у врап задать высоту авто*/
-	height: 800px; /* 82 */
-	margin: 0 auto; /* ? */
+	height: 82vh; /* 82 */
+	margin: 0 auto;
 	position: relative;
-	max-width: 1903px; /* 100% или 100vw*/
-	width: 100%;
+	width: 100%; /* 100% или 100vw*/
+	/*max width 1903px*/
 }
 .wrap > input {
 	display: none;
 }
 
 .slider {
-	background-color: #F7F7F7;
 	height: inherit;
 	overflow: hidden;
 	position: relative;
@@ -196,6 +195,7 @@ h1{
 }
 
 .topeducation{
+	margin-top: 0px;
 	height: 120px;
 	background-color: #ffd43e;
 	border-top: 2px solid #7a7a7a;
@@ -207,4 +207,24 @@ h1{
 
 .boteducation{
 	height: 900px;
+	list-style: none;
+  	display: flex;
+	justify-content: center;
+
+	
+}
+.boteducation li{
+	height: 750px;
+}
+
+.boteducation li:first-child{
+	background-color: aqua;
+	width: 40%;
+}
+
+.boteducation li:last-child{
+	background-color: #737373;
+	width: 500px;
+	background: url("images/loginimg.jpg");
+	background-size: cover;
 }
