@@ -1,0 +1,204 @@
+/*       общие классы              */
+
+
+body {
+  /*background-color: #000000;*/
+  margin: 0;
+  padding: 0;
+  font-family: Roboto,sans-serif;
+  /*min-width: 480px;*/
+}
+
+img {
+  display: block;
+}
+
+a{
+	text-decoration: none;
+  color: black;
+}
+
+
+/*       верхнее меню                   */
+
+.topbar {
+    height: 100px;
+    /*background-color: #4effee;*/
+    width: 100%;
+    border-bottom: 3px solid rgb(236, 236, 236);
+}
+
+  .logo{
+    /*background-color: #e9e9e9;*/
+    width: 200px;
+    height: auto;
+    margin-left: 100px;
+    padding: 20px 0 0 0;
+    float: left;
+  }
+
+  .imagelogo{
+    width: 200px;
+    /*background-color: #4e4e4e;*/
+
+}
+
+
+.menu{
+  margin: 0;
+  padding: 0;
+  /*background-color: blueviolet;*/
+  margin-left: auto;
+  margin-right: 50px;
+  height: 100px;
+  width: 500px;
+  text-align: center;
+  white-space: nowrap;
+  
+  /*word-spacing: -.36em;  убираем отступы inline-block*/
+  
+}
+
+.menu li {
+  display: inline-block;
+  width: auto;
+  height: 60px;
+  padding-top: 35px;
+  /*background-color: chartreuse;*/
+  font-size: 20px;
+  font-weight: 600;
+  color:dodgerblue;
+}
+
+
+
+
+.menu li:nth-child(2){
+  margin: 0 30px;
+}
+
+.menu li:nth-child(3){
+  transition: 0.5s;
+  padding: 17px 10px 0px;
+  height: 40px;
+  border: dodgerblue solid 3px;
+  border-radius: 20px 0 0 0;
+}
+
+.menu li:hover:nth-child(n+3) {
+  border-color: rgb(24, 70, 116);
+  color: rgb(19, 90, 161);
+}
+
+.menu li:nth-child(n+3) > a {
+  color: inherit;
+}
+
+.menu li:nth-child(4){
+  transition: 0.5s;
+  padding: 17px 10px 0px;
+  height: 40px;
+  border: dodgerblue solid 3px;
+  border-radius: 0 0 20px 0;
+}
+
+.menu li:hover:nth-child(-n+2) {
+  border-bottom: 3px solid rgb(230, 230, 230);
+}
+
+
+/*       мобильное меню                   */
+
+.mobile_menu{ /* повесить на переключатель */ 
+  display: none;
+}
+
+
+.mobile_icon{
+  display: none;
+}
+
+
+
+
+
+/*       Медиазапросы                  */
+
+
+@media screen and (max-width: 960px){
+  .logo{
+    margin-left: 30px;
+  }
+  .menu{
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 720px){
+  .logo{
+    margin-left: 50px;
+  }
+  .menu{
+    width: 100px;
+  }
+  .menu li{
+    display: none;
+  }
+  .mobile_icon{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    left: 25px;
+    top: 20px;
+  }
+
+
+  .mobile_menu{ /* повесить на переключатель */ 
+    display: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .mobile_menu li {
+    font-size: 20px;
+    font-weight: 600;
+    
+    padding-top: 30px;
+  }
+
+  .mobile_menu li:hover {
+    border-right: dodgerblue solid 5px;
+    border-left: dodgerblue solid 5px;
+  }
+
+
+  .mobile_menu li:nth-child(1){
+    margin-top: 120px;
+  }
+  
+
+}
+
+
+
+@media screen and (max-width: 540px){
+  
+}
+
+
+@media screen and (max-height: 120px){ /* костыль  */
+  body{
+    overflow: hidden;
+  }
+}
