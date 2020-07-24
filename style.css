@@ -22,7 +22,9 @@ a{
 /*       верхнее меню                   */
 
 .topbar {
+    
     height: 100px;
+    background-color: rgb(252, 252, 252);
     /*background-color: #4effee;*/
     width: 100%;
     border-bottom: 3px solid rgb(236, 236, 236);
@@ -106,6 +108,49 @@ a{
   border-bottom: 3px solid rgb(230, 230, 230);
 }
 
+/*  основной блок контента */
+
+
+.contentOne{
+  
+  width: 100%;
+  height: 500px;
+  background-image: url(./pics/black-vinyl.jpg);
+  background-size: 1000px 500px;
+  background-repeat: no-repeat;
+  background-position: 115% 0%;
+  border-bottom: 3px solid rgb(236, 236, 236);
+}
+
+
+.textContent{
+  /*background-color: lightsalmon; */
+  width: 600px;
+  height: 500px;
+  text-align: center;
+  margin-left: 10vw;
+}
+
+h1{
+  padding: 100px 0 70px;
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: .25px;
+}
+h2{
+  margin: 0;
+}
+
+
+
+.contentTwo{
+  width: 100%;
+  height: 500px;
+  background-color: rgb(243, 243, 243);
+}
+
+
 
 /*       мобильное меню                   */
 
@@ -125,6 +170,61 @@ a{
 /*       Медиазапросы                  */
 
 
+@media screen and (max-width: 1600px){
+  .textContent{
+    margin-left: 100px;
+  }
+  .contentOne{
+    background-position: 140% 0%;
+  }
+}
+
+@media screen and (max-width: 1450px){
+  .textContent{
+    margin-left: 0;
+  }
+  .contentOne{
+    background-position: 140% 0%;
+  }
+}
+
+@media screen and (max-width: 1366px){
+  .textContent{
+    margin-left: 0;
+  }
+  .contentOne{
+    background-position: 110% 0%;
+    background-size: 800px 400px;
+  }
+}
+
+@media screen and (max-width: 1280px){
+  .contentOne{
+    background-position: 50% 0%;
+    height: 500px;
+    background-size: 1000px 500px;
+  }
+  .textContent{
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: inherit;
+  }
+
+  .textContent > div{
+    background-color: rgba(255, 255, 255, .9);
+    color: black;
+    width: 480px;
+    height: 450px;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+}
+
+
+
+
+
 @media screen and (max-width: 960px){
   .logo{
     margin-left: 30px;
@@ -132,12 +232,24 @@ a{
   .menu{
     margin-right: 0px;
   }
+  
+
+
 }
 
 @media screen and (max-width: 720px){
   .logo{
     margin-left: 50px;
   }
+  .imagelogoMobile{
+    position: relative;
+    width: 200px;
+    height: auto;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    padding: 20px 0 0 0;
+  }
+  
   .menu{
     width: 100px;
   }
@@ -169,22 +281,20 @@ a{
   .show {
     display: block;
   }
+  .hiddenOverflow{
+    overflow: hidden;
+  }
 
   .mobile_menu li {
     font-size: 20px;
     font-weight: 600;
     
-    padding-top: 30px;
+    padding-top: 50px;
   }
 
   .mobile_menu li:hover {
     border-right: dodgerblue solid 5px;
     border-left: dodgerblue solid 5px;
-  }
-
-
-  .mobile_menu li:nth-child(1){
-    margin-top: 120px;
   }
   
 
@@ -196,6 +306,12 @@ a{
   
 }
 
+@media screen and (max-width: 500px){
+  .textContent > div{
+    border-radius: 0;
+    width: 100%;
+  }
+}
 
 @media screen and (max-height: 120px){ /* костыль  */
   body{

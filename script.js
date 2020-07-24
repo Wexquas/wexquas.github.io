@@ -13,9 +13,11 @@
 
     let burger = document.getElementById('burgerIcon');
     let menu = document.getElementById('mobileMenu');
+    let body = document.querySelector('body')
     
     let switchBurger = function() {
-        document.getElementById("mobileMenu").classList.toggle("show");
+        menu.classList.toggle("show");
+        body.classList.toggle("hiddenOverflow");
         if (burger.getAttribute('src') == '/pics/Mobile_menu_icon_close.png') {
             burger.setAttribute('src', '/pics/Mobile_menu_icon.png');
           } else {
